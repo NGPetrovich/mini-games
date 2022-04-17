@@ -4,7 +4,15 @@ layout: base.njk
 ---
 
 <div class="container">
-  <h1>Mini-Games</h1>
-  <div class="random-game"></div>
+  <h1>News in Belgium:</h1>
+  {# <div class="random-game"></div> #}
+
+
+  <ul>
+  {% for articles in news.articles %}
+    <li><h5><a href="{{ article.url }}"> {{ articles.title }} </a></h5></li>
+    <span>{{ articles.source.name }} - <time>{{ articles.publishedAt }}</time></span>
+  {% endfor %}
+  </ul>
 </div>
 <script src="/js/index.js"></script>
