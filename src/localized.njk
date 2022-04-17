@@ -1,6 +1,11 @@
 ---
-title: Nikita's Mini-Games
+title: News
 layout: base.njk
+pagination:
+  data: news
+  size: 1
+  alias: news
+permalink: /{{ news.country }}/index.html
 ---
 
 <div class="container">
@@ -10,7 +15,7 @@ layout: base.njk
 
   <ul>
   {% for articles in news.articles %}
-    <li><h5><a href="{{ article.url }}"> {{ articles.title }} </a></h5></li>
+    <li><h5><a href="{{ articles.url }}"> {{ articles.title }} </a></h5></li>
     <span>{{ articles.source.name }} - <time>{{ articles.publishedAt }}</time></span>
   {% endfor %}
   </ul>

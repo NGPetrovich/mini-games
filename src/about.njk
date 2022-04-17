@@ -4,7 +4,10 @@ layout: base.njk
 ---
 
 <div class="container">
-  <h1>Color Changer</h1>
-  <div>Input here</div>
+  <h1>News App</h1>
+  <div>Choose Your Language:</div>
 </div>
-<script src="/js/index.js"></script>
+
+{% for item in news %}
+<a href="/{{ item.country }}">{{ item.country }}</a>
+{% endfor %}
