@@ -8,8 +8,18 @@ pagination:
 permalink: /{{ news.country }}/index.html
 ---
 
+
+
 <div class="container">
-  <h1>News in your region:</h1>
+  <div id="weather" class="hidden"> 
+    <h2>Weather near you:</h2>
+    <p id="city"></p>
+    <p id="temp"></p>
+    <p id="main"></p>
+    <p id="desc"></p>
+  </div>
+
+  <h2>News in your region:</h2>
   {# <div class="random-game"></div> #}
 
 
@@ -21,3 +31,4 @@ permalink: /{{ news.country }}/index.html
   </ul>
 </div>
 <script src="/js/index.js"></script>
+<script src="/js/weather.js"></script>
