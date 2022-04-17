@@ -1,5 +1,5 @@
 function success(pos) {
-  const url = `/.netlify/functions/weatherapi?lat=${pos.coords.latitude}&lon=${pos.coords.longitude}&units=metric`;
+  const url = `/.netlify/functions/weatherapi?lat=${pos.coords.latitude}&lon=${pos.coords.longitude}`;
 
   fetch(url)
     .then((response) => {
@@ -7,7 +7,7 @@ function success(pos) {
     })
     .then((data) => {
       document.querySelector("#city").textContent = data.name;
-      document.querySelector("#temp").textContent = data.main.temp + "'C";
+      document.querySelector("#temp").textContent = data.main.temp + "C";
       document.querySelector("#main").textContent = data.weather[0].main;
       document.querySelector("#desc").textContent = data.weather[0].description;
 
